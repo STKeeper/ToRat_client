@@ -74,7 +74,7 @@ func (c *connection) shell() {
 		case "ping":
 			output = []byte("pong")
 		case "cat":
-			txt, err := cat.Cat(cmdsp[1])
+			txt, err := cat.File(cmdsp[1])
 			if err != nil {
 				output = []byte("Something went wrong could not get txt!")
 			} else {
